@@ -13,7 +13,7 @@ case "$action" in
     ;;
 *)
     git commit -m "$str"
-    sed -in -e '1,/^$/d' todo
+    sed -i -e '1,/^$/d' todo
     str=`sed -n -e '1,/^$/p' todo`
     echo "ok, 接下来的任务是："
     echo "$str" | awk '{print "\t",$0}'
