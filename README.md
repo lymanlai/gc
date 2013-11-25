@@ -11,9 +11,6 @@ e.g.
     xckfl
 
     task c
-    xxxdfkl
-
-    task d
     fkdlflf
 
 ### ./gc (may be, you would like add it to your PATH, so you can simple run gc)
@@ -27,15 +24,11 @@ e.g.
     # Untracked files:
     #   (use "git add <file>..." to include in what will be committed)
     #
-    #   .gc.swp
-    #   gc
-    #   node_modules/
-    #   todo
-    #   todo2
-    #   todon
+    #   ...
     任务描述：
-         task b
-         xckfl
+        task a
+        xxxxx
+
 
      如果不要提交请选择(n|N), 其他任意键则提交:
 
@@ -43,8 +36,7 @@ e.g.
     [master 9e6b67f] task b xckfl
      1 file changed, 1 insertion(+), 3 deletions(-)
      ok, 接下来的任务是：
-         task c
-         xxxdfkl
-
+        task b
+        xckfl
 
 ### don't forget add todo file to your .gitignore file !!!
