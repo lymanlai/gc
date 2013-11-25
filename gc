@@ -1,0 +1,21 @@
+#!/bin/bash
+
+git status
+str=`sed -n -e '1,/^$/p' todo`
+echo "任务描述："
+echo "$str" | awk '{print "\t",$0}'
+echo ""
+read -p "如果不要提交请选择(n|N), 其他任意键则提交:" action
+case "$action" in
+[nN])
+    echo "exit"
+    exit
+    ;;
+*)
+    git commit -m "$str"
+    sed -in -e '1,/^$/d' todo
+    str=`sed -n -e '1,/^$/p' todo`
+    echo "ok, 接下来的任务是："
+    echo "$str" | awk '{print "\t",$0}'
+    ;;
+esac
